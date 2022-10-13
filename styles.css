@@ -1,0 +1,136 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --black: #252525;
+    --yellow: #ffa400;
+    --red: #fc2933;
+    --white: #ffffff;
+    --grey: #4d4d4d;
+    --pizzacolour: linear-gradient(90deg, rgba(255,161,0,1) 10%, rgba(251,16,61,1) 28%);
+    }
+
+.container  {
+    background-color:#131415;
+    box-shadow: 0px 48px 128px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: auto;
+}
+
+/* header start  */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 120px;
+    padding: 20px;
+    max-width: 1400px;
+}
+
+.logo_container{
+    width: 100px;
+    height: 100px;
+}
+
+.logo_container>img{
+    width: 75px;
+    height: 75px;
+}
+
+.navbar{
+display: flex;
+align-items: center;}
+.navbar>ul{
+    display: flex;
+   
+}
+
+.navbar>ul>li{
+display: flex;
+padding: 30px ;
+}
+.navbar>ul>li>p{
+    padding: 0 5px;
+    color: var(--white);
+}
+
+.navbar>ul>li>i{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+#icon-cart{
+    position: relative;
+
+}
+
+#icon-cart::before{
+    content: "7";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius:  50%;
+    background-color: #fc2933;
+    top: 10 px  ;
+    right: 24px;
+    
+    bottom: 40px;
+    font-size: 13px;
+    display: flex;
+    color: #ffffff;
+    border: solid white 1px;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+/* end header  */
+
+
+/* Hero start  */
+
+.hero{
+    max-width: 1400px;
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.text_hero{
+    border: solid white 1px;
+    width: 650px;
+    height: 160px;
+}
+.content_title{
+    width: 600px;
+    height: 90px;
+}
+.content_title>h1>span{
+    color: var(--white);
+    font-size: 66px;
+    font-weight: 700;
+    
+}
+.content_title>h1{
+    font-size: 35px;
+    color: var(--white);
+       
+}
+
+.img_hero{
+    border: solid #ffffff 1px
+}
+
+/* end hero  */
