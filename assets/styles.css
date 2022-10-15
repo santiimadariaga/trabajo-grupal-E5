@@ -26,6 +26,10 @@
   box-shadow: 0px 48px 128px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 /* header start  */
@@ -41,8 +45,8 @@
   align-items: center;
   width: 100%;
   height: 110px;
-  padding: 20px;
-  max-width: 1600px;
+  padding: 35px 30px 20px;
+  max-width: 1400px;
 }
 
 .logo_container {
@@ -110,19 +114,35 @@
 
 /* Hero start  */
 
+button {
+  color: #ffffff;
+  font-size: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+  width: 80px;
+  height: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(98.81deg, #fcbc4d -0.82%, #fc496a 101.53%);
+}
+
 .hero {
   max-width: 1400px;
   width: 100%;
   height: auto;
-  padding-top: 20px;
+  padding: 40px 100px 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+
+  position: relative;
 }
 
 .text_hero {
-  border: solid white 1px;
   width: 650px;
   height: auto;
 }
@@ -135,13 +155,15 @@
 .content_title > .title {
   color: var(--white);
   font-size: 66px;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .content_text_title {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 20px;
 }
 
 .content_text_title > h2 {
@@ -151,6 +173,7 @@
 
 .content_text_title > p {
   color: var(--white);
+  letter-spacing: 0.5px;
 }
 
 .content_btn {
@@ -158,39 +181,73 @@
 }
 
 .content_btn > .btn_title {
-  height: 25px;
-  width: auto;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
   color: var(--white);
-  background-color: var(--pizzacolour);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .img_hero {
-  border: solid #ffffff 1px;
+  /* border: solid #ffffff 1px; */
+  padding-right: 180px;
+}
+
+.img_two {
+  position: absolute;
+  top: -70px;
+  right: 30px;
+  animation: slide-top 3s linear infinite both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* end hero  */
 
 /* recomendadas */
 
-.recomendamos {
-  /* max-width: 1400px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  padding: 20px;
+.recommend {
+  width: 100%;
   max-width: 1400px;
 }
-.cards_reco {
-  padding: 40px 0;
+
+.content_recommend {
   display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 20px;
+}
+
+.p_reco {
+  padding-left: 60px;
+}
+
+.cards_reco {
+  padding: 40px 0 40px 0;
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   align-items: center;
   top: 120px;
 }
+
 .card {
   background-color: #252525;
   display: flex;
@@ -204,20 +261,37 @@
   top: 583px;
   border-radius: 15px;
 }
+
+.price_card {
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.text_one {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 29px;
+  text-align: left;
+}
+
+.text_two {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .btn {
   display: flex;
   justify-content: space-between;
 }
-button {
-  color: #ffffff;
-  font-size: 12px;
-  border: none;
-  border-radius: 25px;
-  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
-  width: 80px;
-  height: 20px;
-  color: white;
-}
+
 /* recomendadas fin  */
 
 /* categorias */
@@ -235,9 +309,11 @@ button {
 .container_categories {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
+
 .card_category {
   display: flex;
   flex-direction: column;
@@ -254,6 +330,7 @@ button {
     min-height: 171px; */
   border-radius: 15px;
 }
+
 .linea {
   width: 24px;
   height: 4px;
@@ -273,17 +350,20 @@ button {
   padding: 20px;
   max-width: 1400px;
 }
+
 .container_populares {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
+
 .card-populares {
   background-color: #252525;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: inherit;
   align-items: center;
   gap: 20px;
   min-width: 347px;
