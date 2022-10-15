@@ -7,7 +7,15 @@
 
   font-family: "Montserrat", sans-serif;
 }
-
+body {
+  color: #4d4d4d;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
 :root {
   --black: #252525;
   --yellow: #ffa400;
@@ -261,32 +269,6 @@ button:hover {
   top: 583px;
   border-radius: 15px;
 }
-
-.price_card {
-  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.text_one {
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 29px;
-  text-align: left;
-}
-
-.text_two {
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
 .btn {
   display: flex;
   justify-content: space-between;
@@ -363,7 +345,7 @@ button:hover {
   background-color: #252525;
   display: flex;
   justify-content: center;
-  flex-wrap: inherit;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
   min-width: 347px;
