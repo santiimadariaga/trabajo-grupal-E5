@@ -22,7 +22,7 @@
 }
 
 .container {
-  background-color: #131415;
+  background-color: var(--black);
   box-shadow: 0px 48px 128px rgba(0, 0, 0, 0.4);
   width: 100%;
   height: auto;
@@ -97,7 +97,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background-color: #fc2933;
+  background-color: var(--red);
   top: 10 px;
   right: 24px;
   cursor: pointer;
@@ -105,7 +105,7 @@
   bottom: 40px;
   font-size: 13px;
   display: flex;
-  color: #ffffff;
+  color: var(--white);
   border: solid white 1px;
   justify-content: center;
   align-items: center;
@@ -115,7 +115,7 @@
 /* Hero start  */
 
 button {
-  color: #ffffff;
+  color: var();
   font-size: 12px;
   border: none;
   border-radius: 25px;
@@ -138,7 +138,6 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   position: relative;
 }
 
@@ -194,7 +193,6 @@ button:hover {
 }
 
 .img_hero {
-  /* border: solid #ffffff 1px; */
   padding-right: 180px;
 }
 
@@ -235,6 +233,7 @@ button:hover {
 
 .p_reco {
   padding-left: 60px;
+  color: var(--white);
 }
 
 .cards_reco {
@@ -257,8 +256,6 @@ button:hover {
   gap: 20px;
   min-width: 347px;
   min-height: 103px;
-  left: 197px;
-  top: 583px;
   border-radius: 15px;
 }
 
@@ -295,15 +292,26 @@ button:hover {
 /* recomendadas fin  */
 
 /* categorias */
+
+.categories{
+  width: 100%;
+  max-width: 1400px;
+}
+
+.cat_title{
+  padding-left: 85px;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 800;
+}
+
 .category {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
   width: auto;
   padding: 20px;
-  max-width: 1400px;
 }
 
 .container_categories {
@@ -319,33 +327,35 @@ button:hover {
   flex-direction: column;
   width: 147px;
   height: 171px;
-  left: 1214px;
-  top: 821px;
   background-color: #252525;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* gap: 20px;
-    min-width:147px;
-    min-height: 171px; */
+  gap: 15px;
+  min-width:147px;
+  min-height: 171px;
   border-radius: 15px;
+  cursor: pointer;
 }
 
 .linea {
   width: 24px;
   height: 4px;
-  left: 726px;
-  top: 970px;
   border-radius: 15px;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
 }
 
 /* categorias fin*/
+
+
+.sec_populares{
+  width: 100%;
+  max-width: 1400px;
+}
+
 .populares {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
   width: auto;
   padding: 20px;
   max-width: 1400px;
@@ -365,15 +375,74 @@ button:hover {
   justify-content: center;
   flex-wrap: inherit;
   align-items: center;
-  gap: 20px;
-  min-width: 347px;
-  min-height: 103px;
-  left: 197px;
-  top: 583px;
   border-radius: 15px;
   height: 213px;
   width: 282px;
-  left: 1098px;
-  top: 1120px;
-  border-radius: 15px;
 }
+
+.text-populares{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-right: 20px;
+}
+
+.img_popular{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+/* FOOT ONE */
+
+.foot_one{
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  gap: 30px;
+  color:white;
+  padding: 60px;
+}
+
+.foot_one, a{
+  color: white;
+  text-decoration: none;
+}
+
+
+.foot_two{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* CART */
+
+.cart{
+position: absolute;
+width: 400px;
+height: 700px;
+left: 1084px;
+top: -9px;
+background: #252525;
+box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+border-radius: 15px;
+display: none;
+}
+
+.check-out{
+position: absolute;
+height: 11px;
+left: 73.35%;
+right: 25.93%;
+top: calc(50% - 11px/2 - 905px);
+font-family: 'Montserrat';
+font-size: 9px;
+line-height: 11px;
+color: #FEFEFF;
+background: var(--pizzacolour);
+}
+
