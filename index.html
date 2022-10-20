@@ -27,7 +27,7 @@
                     <ul>
                         <li id="icon-home">
                             <i class="fa-solid fa-house"></i>
-                            <p>Home</p>
+                            <p><a href="#hero">Home</a></p>
                         </li>
                         <li id="icon-cart">
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -42,7 +42,7 @@
 
         <!-- HERO -->
         <section class="content_container">
-            <div class="hero">
+            <div class="hero" id="hero">
                 <div class="text_hero">
                     <div class="content_title">
                         <h1 class="title">Si tenes Zappi,</h1>
@@ -69,39 +69,39 @@
                 <div class="content_recommend">
                     <p class="text_one p_reco">Hoy te recomendamos</p>
                     <div class="cards_reco">
-                        <div class="card">
+                        <div class="card hov">
                             <div class="img_card">
                                 <img src="./assets/images/recom (1).png" alt="" />
                             </div>
                             <div class="texts_card">
                                 <p class="text_two">Bennazianna</p>
-                                <p>La más completa</p>
+                                <p class="opacity">La más completa</p>
                                 <p class="price_card">$ 3650</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card hov">
                             <div class="img_card">
                                 <img src="./assets/images/recom (2).png" alt="" />
                             </div>
                             <div class="texts_card">
                                 <p class="text_two">Tronco-Pizza</p>
-                                <p>Para todo el día</p>
+                                <p class="opacity">Para todo el día</p>
                                 <p class="price_card">$ 870</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
-                        <div class="card">
+                        <div class="card hov">
                             <div class="img_card">
                                 <img src="./assets/images/recom (3).png" alt="" />
                             </div>
                             <div class="texts_card">
                                 <p class="text_two">Papas a la Provenzal</p>
-                                <p>Van como piña</p>
+                                <p class="opacity">Van como piña</p>
                                 <p class="price_card">$ 360</p>
                             </div>
                             <div class="btn">
@@ -120,7 +120,7 @@
                 <div class="category">
                     <div class="container_categories">
 
-                        <div class="card_category">
+                        <div class="card_category hov active" data-category="popular">
                             <div class="content_img_card">
                                 <img src="./assets/images/pizza 2.png" alt="" />
                             </div>
@@ -128,7 +128,7 @@
                             <span class="linea"></span>
                         </div>
 
-                        <div class="card_category">
+                        <div class="card_category hov" data-category="pizzas">
                             <div class="content_img_card">
                                 <img src="./assets/images/pizza 1.png" alt="" />
                             </div>
@@ -136,7 +136,7 @@
                             <span class="linea"></span>
                         </div>
 
-                        <div class="card_category">
+                        <div class="card_category hov" data-category="hamburguesas">
                             <div class="content_img_card">
                                 <img src="./assets/images/burger.png" alt="" />
                             </div>
@@ -144,7 +144,7 @@
                             <span class="linea"></span>
                         </div>
 
-                        <div class="card_category">
+                        <div class="card_category hov" data-category="papas">
                             <div class="content_img_card">
                                 <img src="./assets/images/fries.png" alt="" />
                             </div>
@@ -152,7 +152,7 @@
                             <span class="linea"></span>
                         </div>
 
-                        <div class="card_category">
+                        <div class="card_category hov" data-category="burritos">
                             <div class="content_img_card">
                                 <img src="./assets/images/buritto.png" alt="" />
                             </div>
@@ -160,7 +160,7 @@
                             <span class="linea"></span>
                         </div>
 
-                        <div class="card_category">
+                        <div class="card_category hov" data-category="tacos">
                             <div class="content_img_card">
                                 <img src="./assets/images/taco.png" alt="" />
                             </div>
@@ -168,7 +168,7 @@
                             <span class="linea"></span>
                         </div>
 
-                        <div class="card_category">
+                        <div class="card_category hov" data-category="batidos">
                             <div class="content_img_card">
                                 <img src="./assets/images/batido.png" alt="" />
                             </div>
@@ -186,28 +186,29 @@
                 <div class="populares">
                     <p class="text_one p_reco">Los mas populares</p>
                     <div class="container_populares">
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (1).png" alt="">
                             </div>
                             <div class="text-populares">
                                 <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="opacity">Solo para expertos</p>
+                                <p class="price_card">$ 350</p>
+
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
 
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (2).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">¡Q' Jamone!</p>
+                                <p class="opacity">c/jamón crudo</p>
+                                <p class="price_card">$ 350</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
@@ -215,81 +216,81 @@
 
                         </div>
 
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (3).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">La Charly García</p>
+                                <p class="opacity">¡BASTA!</p>
+                                <p class="price_card">$ 380</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
 
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (4).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">La Maradona</p>
+                                <p class="opacity">¡Eterna!</p>
+                                <p class="price_card">$ 450</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
 
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (5).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">Picantovich</p>
+                                <p class="opacity">Pica 2 veces</p>
+                                <p class="price_card">$ 750</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (6).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">La Hasbulla</p>
+                                <p class="opacity">En honor al 1</p>
+                                <p class="price_card">$ 990</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (7).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">Leo Messi</p>
+                                <p class="opacity">¡De pié señores!</p>
+                                <p class="price_card">$ 100</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
                             </div>
                         </div>
-                        <div class="card-populares">
+                        <div class="card-populares hov">
                             <div class="img_popular">
                                 <img src="./assets/images/Photo Menu (8).png" alt="">
                             </div>
                             <div class="text-populares">
-                                <p class="text_two">Mr.Pit</p>
-                                <p>Solo para expertos</p>
-                                <p class="price_card">$ 3650</p>
+                                <p class="text_two">Nick Gi</p>
+                                <p class="opacity">La que desaparece</p>
+                                <p class="price_card">$ Gratis</p>
                             </div>
                             <div class="btn">
                                 <button>Agregar</button>
@@ -324,9 +325,9 @@
 
         </section>
     </main>
-    
 
-    <script src="assets/main.js"></script>
+    <script src="./assets/data.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 
 </html>
