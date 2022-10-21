@@ -2,7 +2,7 @@ const productsData = [
   {
     id: 1,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (1).png",
+    img: "./assets/images/PhotoMenu(1).png",
     name: "Mr.Pit",
     descr: "Solo para expertos",
     price: 350,
@@ -11,7 +11,7 @@ const productsData = [
   {
     id: 2,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (2).png",
+    img: "./assets/images/PhotoMenu(2).png",
     name: "¡Q' Jamone!",
     descr: "c/jamón crudo",
     price: 350,
@@ -20,7 +20,7 @@ const productsData = [
   {
     id: 3,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (3).png",
+    img: "./assets/images/PhotoMenu(3).png",
     name: "La Charly García",
     descr: "¡BASTA!",
     price: 380,
@@ -29,7 +29,7 @@ const productsData = [
   {
     id: 4,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (4).png",
+    img: "./assets/images/PhotoMenu(4).png",
     name: "La Maradona",
     descr: "¡Eterna!",
     price: 450,
@@ -38,7 +38,7 @@ const productsData = [
   {
     id: 5,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (5).png",
+    img: "./assets/images/PhotoMenu(5).png",
     name: "Picantovich",
     descr: "Pica 2 veces",
     price: 750,
@@ -47,7 +47,7 @@ const productsData = [
   {
     id: 6,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (6).png",
+    img: "./assets/images/PhotoMenu(6).png",
     name: "La Hasbulla",
     descr: "En honor al 1",
     price: 990,
@@ -56,7 +56,7 @@ const productsData = [
   {
     id: 7,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (7).png",
+    img: "./assets/images/PhotoMenu(7).png",
     name: "Leo Messi",
     descr: "¡De pié señores!",
     price: 100,
@@ -65,7 +65,7 @@ const productsData = [
   {
     id: 8,
     category: "pizzas",
-    img: "./assets/images/Photo Menu (8).png",
+    img: "./assets/images/PhotoMenu(8).png",
     name: "Nick Gi",
     descr: "La que desaparece",
     price: "Gratis",

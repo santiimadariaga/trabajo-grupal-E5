@@ -416,7 +416,11 @@ button:hover {
 
 /* ESTILO PARA CATEGORÍA SELECCIONADA */
 .active {
-  background-color: rgb(81, 81, 81);
+  background: linear-gradient(
+    280deg,
+    rgba(255, 161, 0, 1) 0%,
+    rgba(251, 16, 61, 1) 100%
+  );
 }
 
 /* categorias fin*/
