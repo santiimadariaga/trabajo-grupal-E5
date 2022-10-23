@@ -469,7 +469,9 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 15px;
+  padding-top: 15px
+;
+
 }
 
 /* FOOT ONE */
