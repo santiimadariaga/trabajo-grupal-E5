@@ -145,7 +145,7 @@ button {
   border-radius: 25px;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
   width: 80px;
-  height: 20px;
+  height: 25px;
   color: white;
   cursor: pointer;
 }
@@ -353,7 +353,8 @@ button:hover {
 
 .btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 /* recomendadas fin  */
@@ -453,7 +454,7 @@ button:hover {
   flex-wrap: inherit;
   align-items: center;
   border-radius: 15px;
-  height: 213px;
+  height: auto;
   width: 282px;
   transition: all 0.3s ease;
 }
@@ -462,16 +463,26 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding-right: 20px;
 }
 
 .img_popular {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 15px
-;
+  padding-top: 15px;
+}
 
+.img_popular > img {
+  border-radius: 15px;
+}
+
+.content_text_cards {
+  width: 100%;
+  padding: 5px 25px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 /* FOOT ONE */
