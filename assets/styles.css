@@ -422,6 +422,9 @@ button:hover {
     rgba(255, 161, 0, 1) 0%,
     rgba(251, 16, 61, 1) 100%
   );
+  box-shadow: 5px 5px 15px 5px #000000;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 /* categorias fin*/
