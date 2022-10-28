@@ -11,6 +11,7 @@ const contentProducts = document.querySelector(".content_cart_products");
 const closeCart = document.querySelector(".check-out");
 const viewMore = document.getElementById("viewMore");
 const overlay = document.getElementById("overlay");
+const successModal = document.querySelector(".modal");
 
 let cart = JSON.parse(localStorage.getItem(`cart`)) || [];
 
@@ -73,34 +74,6 @@ const renderPopularProducts = () => {
   products.innerHTML = productsList.map(renderProduct).join("");
 };
 
-// const renderProducts = (e) => {
-//   if (!e.target.classList.contains("card_category")) {
-//     return;
-//   }
-//   renderFilteredProducts();
-// };
-
-// const changeActiveState = (e) => {
-//   const selectedCategory = e.target.dataset.category;
-
-//   categories.forEach((categoryCard) => {
-//     if (categoryCard.dataset.category != selectedCategory) {
-//       categoryCard.classList.remove("active");
-//       return;
-//     }
-//     categoryCard.classList.add("active");
-//   });
-// };
-
-// const applyFilter = (e) => {
-//   if (!e.target.classList.contains("card_category")) return;
-//   changeActiveState(e);
-//   if (!e.target.dataset.category) {
-//     products.innerHTML = "";
-//     renderFilteredProducts();
-//   }
-// };
-
 /* ABRIR Y CERRAR CARRITO */
 
 const toggleCart = () => {
@@ -140,11 +113,11 @@ const renderCartProduct = (cartProduct) => {
     </div>
     <div class="product_button">
       <button class="minus">
-        <p class="pos" data-id=${id}>-</p>
+        <p class="down" data-id=${id}>-</p>
       </button>
         <p class="quantity">${quantity}</p>
       <button>
-        <p class="pos_two" data-id=${id}>+</p>
+        <p class="up" data-id=${id}>+</p>
       </button>
     </div>
   </div>
@@ -154,7 +127,7 @@ const renderCartProduct = (cartProduct) => {
 const renderCart = () => {
   // Si el carrito está vacío
   if (!cart.length) {
-    contentProducts.innerHTML = `<p class="opacity">No hay nada para mostrar aquí.</p>`;
+    contentProducts.innerHTML = `<p class="opacity">No hay productos en el carrito.</p>`;
     return;
   }
   // Renderizamos lo que haya
@@ -186,14 +159,27 @@ const createProductData = (id, name, descr, price, img) => {
   return { id, name, descr, price, img };
 };
 
+const checkCartState = () => {
+  saveToLocalStorage(cart);
+  renderCart(cart);
+  showTotal(cart);
+  disabledBtn(buyBtn);
+};
+
+const showSuccesModal = (msg) => {
+  successModal.classList.add("active_modal");
+  successModal.textContent = msg;
+  setTimeout(() => {
+    successModal.classList.remove("active_modal");
+  }, 1500);
+};
+
 const isExistingCartProduct = (product) => {
-  return cart.find((item) => {
-    item.id === product.id;
-  });
+  return cart.find((item) => item.id === product.id);
 };
 
 const addUnitToProduct = (product) => {
-  cart.map((cartProduct) => {
+  cart = cart.map((cartProduct) => {
     return cartProduct.id === product.id
       ? { ...cartProduct, quantity: cartProduct.quantity + 1 }
       : cartProduct;
@@ -207,23 +193,81 @@ const createCartProduct = (product) => {
 const addProduct = (e) => {
   if (!e.target.classList.contains("btn_add")) return;
 
-  console.log(e.target.classList.contains("btn_add"));
-
   const { id, name, descr, price, img } = e.target.dataset;
 
   const product = createProductData(id, name, descr, price, img);
 
   // El producto existe en el carrito
   if (isExistingCartProduct(product)) {
-    addUnitToProduct(product);
+    const producto = cart.find((p) => p.id === product.id);
+    addUnitToProduct(producto);
+    showSuccesModal("Se agregó una unidad del producto al carrito.");
   } else {
     // El producto no existe
     createCartProduct(product);
+    showSuccesModal("Se agregó un producto nuevo al carrito.");
   }
-  saveToLocalStorage(cart);
-  renderCart(cart);
-  showTotal(cart);
-  disabledBtn(buyBtn);
+  checkCartState();
+};
+
+const removeProductFromCart = (existingProduct) => {
+  cart = cart.filter((product) => product.id !== existingProduct.id);
+  checkCartState();
+};
+
+const substractProductUnit = (existingProduct) => {
+  cart = cart.map((cartProduct) => {
+    return cartProduct.id === existingProduct.id
+      ? { ...cartProduct, quantity: cartProduct.quantity - 1 }
+      : cartProduct;
+  });
+};
+
+const minusBtnEvent = (id) => {
+  const existingCartProduct = cart.find((item) => item.id === id);
+  if (existingCartProduct.quantity === 1) {
+    if (window.confirm("¿Desea eliminar el producto del carrito?")) {
+      removeProductFromCart(existingCartProduct);
+    }
+    return;
+  }
+  substractProductUnit(existingCartProduct);
+};
+
+const plusBtnEvent = (id) => {
+  const existingCartProduct = cart.find((item) => item.id === id);
+
+  addUnitToProduct(existingCartProduct);
+};
+
+const handleQuantity = (e) => {
+  if (e.target.classList.contains("down")) {
+    minusBtnEvent(e.target.dataset.id);
+  } else if (e.target.classList.contains("up")) {
+    plusBtnEvent(e.target.dataset.id);
+  }
+  checkCartState();
+};
+
+const resetCartItems = () => {
+  cart = [];
+  checkCartState();
+};
+
+const completeCartAction = (confirmMsg, successMsg) => {
+  if (!cart.length) return;
+
+  if (window.confirm(confirmMsg)) {
+    resetCartItems();
+    alert(successMsg);
+  }
+};
+
+const completeBuy = (e) => {
+  completeCartAction(
+    "¿Desea finalizar su compra?",
+    "La compra se ha realizado correctamente"
+  );
 };
 
 const init = () => {
@@ -236,6 +280,8 @@ const init = () => {
   document.addEventListener("DOMContentLoaded", renderCart);
   document.addEventListener("DOMContentLoaded", showTotal);
   products.addEventListener("click", addProduct);
+  contentProducts.addEventListener("click", handleQuantity);
+  buyBtn.addEventListener("click", completeBuy);
   disabledBtn(buyBtn);
 };
 

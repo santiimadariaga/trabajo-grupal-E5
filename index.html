@@ -48,24 +48,24 @@
             <h2>Tus Productos</h2>
             <div class="content_cart_products">
                 <!-- <div class="cart_products">
-                    <div class="product_img">
-                        <img src="assets/images/PhotoMenu(1).png" alt="" />
-                    </div>
-                    <div class="product_text">
-                        <p class="product_name">Mr Pit</p>
-                        <p class="opacity">Solo para expertos</p>
-                        <p class="product_price">$350</p>
-                    </div>
-                    <div class="product_button">
-                        <button class="minus">
-                            <p class="pos">-</p>
-                        </button>
-                        <p class="quantity">1</p>
-                        <button>
-                            <p class="pos_two">+</p>
-                        </button>
-                    </div>
-                </div> -->
+                        <div class="product_img">
+                            <img src=${img} alt=${name} />
+                        </div>
+                        <div class="product_text">
+                          <p class="product_name">${name}</p>
+                          <p class="opacity">${descr}</p>
+                          <p class="product_price">$ ${price}</p>
+                        </div>
+                        <div class="product_button">
+                          <button class="minus">
+                            <p class="down" data-id=${id}>-</p>
+                          </button>
+                            <p class="quantity">${quantity}</p>
+                          <button>
+                            <p class="up" data-id=${id}>+</p>
+                          </button>
+                        </div>
+                    </div> -->
             </div>
             <div class="total_price_content">
                 <div class="subT">
@@ -81,7 +81,7 @@
             <div class="total_price_content">
                 <div class="subT">
                     <h4>Total:</h4>
-                    <p id="total">$ 0</p>
+                    <h4 id="total">$ 0</h4>
                 </div>
             </div>
             <div class="btn_cart_buy">
@@ -249,7 +249,7 @@
                                 
                                   </div>
                                   <div class="btn">
-                                      <button class="btn_add"
+                                      <button class="btn_add" id="btn_add"
                                       data-id="${id}"
                                       data-name="${name}"
                                       data-descr="${descr}"
@@ -277,6 +277,8 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal"></div>
 
         <!-- FIN LANDING -->
     </main>
